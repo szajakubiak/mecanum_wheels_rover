@@ -1,2 +1,2 @@
-# mecanum_wheels_rover
- Rover with mecanum wheels
+# Mecanum wheels rover
+ Rover with mecanum wheels and LEGO Technic chasis
