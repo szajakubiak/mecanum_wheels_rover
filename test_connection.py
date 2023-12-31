@@ -2,7 +2,7 @@ import board
 from busio import UART
 
 buffer=bytearray(14)
-uart = UART(board.D1, board.D0, baudrate=115200)
+uart = UART(board.TX, board.RX, baudrate=115200)
 
 while True:
     c = uart.read(1)
