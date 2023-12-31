@@ -3,6 +3,7 @@ import digitalio
 import pwmio
 from adafruit_motor import motor
 from busio import UART
+from time import sleep
 
 buffer = bytearray(14)
 uart = UART(board.TX, board.RX  , baudrate=115200)
