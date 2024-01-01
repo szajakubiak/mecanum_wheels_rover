@@ -75,9 +75,11 @@ sleep(1)
 while True:
     ch1, ch2, ch3, ch4, ch5, ch6 = read_commands()
 
-    spd = map_value(ch2)
+    forward = map_value(ch2)
+    strafe = map_value(ch1)
+    turn = map_value(ch4)
 
-    mfr.throttle = spd
-    mfl.throttle = spd
-    mbr.throttle = spd
-    mbl.throttle = spd
+    mfr.throttle = (forward+strafe+turn)/3.0
+    mfl.throttle = (forward-strafe-turn)/3.0
+    mbr.throttle = (forward-strafe+turn)/3.0
+    mbl.throttle = (forward+strafe-turn)/3.0
