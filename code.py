@@ -78,8 +78,9 @@ while True:
     forward = map_value(ch2)
     strafe = map_value(ch1)
     turn = map_value(ch4)
+    axes_sum = max(abs(forward) + abs(strafe) + abs(turn), 1)
 
-    mfr.throttle = (forward+strafe+turn)/3.0
-    mfl.throttle = (forward-strafe-turn)/3.0
-    mbr.throttle = (forward-strafe+turn)/3.0
-    mbl.throttle = (forward+strafe-turn)/3.0
+    mfr.throttle = (forward + strafe + turn) / axes_sum
+    mfl.throttle = (forward - strafe - turn) / axes_sum
+    mbr.throttle = (forward - strafe + turn) / axes_sum
+    mbl.throttle = (forward + strafe - turn) / axes_sum
