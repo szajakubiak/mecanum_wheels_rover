@@ -1,7 +1,7 @@
 import board
 from busio import UART
 
-buffer=bytearray(14)
+buffer = bytearray(14)
 uart = UART(board.TX, board.RX, baudrate=115200)
 
 while True:
@@ -16,4 +16,17 @@ while True:
             ch4 = buffer[7] * 255 + buffer[6]
             ch5 = buffer[9] * 255 + buffer[8]
             ch6 = buffer[11] * 255 + buffer[10]
-            print('ch  1-',ch1,'  2-',ch2,'  3-',ch3,'  4-',ch4,'  5-',ch5,'   6-',ch6)
+            print(
+                "ch  1-",
+                ch1,
+                "  2-",
+                ch2,
+                "  3-",
+                ch3,
+                "  4-",
+                ch4,
+                "  5-",
+                ch5,
+                "   6-",
+                ch6,
+            )

@@ -37,17 +37,19 @@ mfl = motor.DCMotor(mfl_in1, mfl_in2)
 mbr = motor.DCMotor(mbr_in1, mbr_in2)
 mbl = motor.DCMotor(mbl_in1, mbl_in2)
 
+
 def map_value(val, from_min=1000, from_max=2000, to_min=-1, to_max=1):
     if val < from_min:
         val = from_min
     if val > from_max:
         val = from_min
-    
+
     percentage = (val - from_min) / (from_max - from_min)
-    
+
     mapped_value = to_min + percentage * (to_max - to_min)
-    
+
     return mapped_value
+
 
 def read_commands():
     while uart.read(1) != b" ":
@@ -65,6 +67,7 @@ def read_commands():
         return (ch1, ch2, ch3, ch4, ch5, ch6)
     else:
         return (1500, 1500, 1500, 1000, 1000, 1000)
+
 
 mfr.throttle = 0
 mfl.throttle = 0
