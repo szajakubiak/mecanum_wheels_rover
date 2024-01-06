@@ -6,7 +6,7 @@ from busio import UART
 from time import sleep
 
 buffer = bytearray(14)
-uart = UART(board.TX, board.RX  , baudrate=115200)
+uart = UART(board.TX, board.RX, baudrate=115200)
 
 mfr_in1 = pwmio.PWMOut(board.D7, frequency=5000, duty_cycle=0)
 mfr_in2 = pwmio.PWMOut(board.D8, frequency=5000, duty_cycle=0)
