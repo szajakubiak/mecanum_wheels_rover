@@ -10,4 +10,5 @@
 ## TODO
 * Add photo of wheels orientation
 * Add electrical connections table
+* Add detailes about RC controller and receiver
 * Design mapping between RC remote channels and movement
