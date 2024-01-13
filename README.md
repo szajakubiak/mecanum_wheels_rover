@@ -10,4 +10,5 @@
 ## TODO
 * Add photo of wheels orientation
 * Add electrical connections table
-* Design mapping between RC remote channels and movement
+* Mapping between RC channels and robot movement
+* Issue with breaking the CircuitPython when powering on from battery
