@@ -10,5 +10,7 @@
 ## TODO
 * Add photo of wheels orientation
 * Add electrical connections table
+<<<<<<< HEAD
 * Mapping between RC channels and robot movement
 * Issue with breaking the CircuitPython when powering on from battery
+* Add detailes about RC controller and receiver
